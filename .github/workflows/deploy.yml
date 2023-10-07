@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Deploy to Server
-        uses: Sanch13/eng-rus-dict@main
+        uses: Sanch13/eng-rus-dict
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}

@@ -1,0 +1,25 @@
+name: Deploy
+
+on:
+  # opening a pull request to main branch will be a trigger
+  pull_request:
+    branches:
+      - main
+  # any code pushed to main branch will also be a trigger
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to Server
+        uses: Sanch13/eng-rus-dict@main
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.SSHKEY }}
+          script: "cd /home/sanch/www/ && touch text.txt"

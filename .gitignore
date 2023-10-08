@@ -9,4 +9,8 @@ __pycache__
 __init__
 *.crt
 *.key
+<<<<<<< HEAD
 .github
+=======
+
+>>>>>>> 6031d00315c76a9d653cc8a9bcd0dedef69ad018

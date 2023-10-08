@@ -21,4 +21,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
-          script: "cd /home/sanch/www/ && touch text.txt"
+          script: |
+            cd /home/{{secrets.USERNAME}}/www/
+            touch text.txt

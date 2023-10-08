@@ -1,5 +1,5 @@
 name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: Deploy is running 🚀
 
 on:
   push:
@@ -23,5 +23,5 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
           script: |
-            cd ${{ PATH_TO_SITE }}
+            cd ${{ secrets.PATH_TO_SITE }}
             touch text.txt

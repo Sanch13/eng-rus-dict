@@ -23,5 +23,6 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
           script: |
-            cd /home/{{ secrets.USERNAME }}/www/
-            touch text.txt
+            cd /home/sanch/www/
+            echo ${PWD}
+            mkdir folder

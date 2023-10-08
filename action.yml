@@ -11,10 +11,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Deploy to Server
         uses: Sanch13/eng-rus-dict@main
@@ -23,4 +21,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
-
+          script: |
+            cd /home/{{secrets.USERNAME}}/www/
+            touch text.txt

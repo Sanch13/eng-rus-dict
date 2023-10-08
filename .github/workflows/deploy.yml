@@ -23,5 +23,5 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
           script: |
-            whoami
-            ls -al
+            cd /home/{{ secrets.USERNAME }}/www/
+            touch text.txt

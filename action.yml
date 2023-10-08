@@ -21,8 +21,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
-          run: |
-            ssh -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }}
           script: |
             cd /home/{{secrets.USERNAME}}/www/
             touch text.txt

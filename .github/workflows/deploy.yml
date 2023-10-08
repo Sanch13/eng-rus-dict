@@ -23,6 +23,5 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
           script: |
-            cd /home/sanch/www/
-            echo ${PWD}
-            mkdir folder
+            cd ${{ PATH_TO_SITE }}
+            touch text.txt

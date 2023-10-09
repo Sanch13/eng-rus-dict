@@ -4,6 +4,8 @@
 {% block title %} <title>{{title}}</title> {% endblock%}
 
 {% block content %}
+    <h1> Введите английское слово и перевод к нему </h1>
+
 <form action="{% url 'dictionary:add_word' %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}

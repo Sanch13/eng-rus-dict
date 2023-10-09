@@ -6,4 +6,4 @@ class AddWord(forms.ModelForm):
 
     class Meta:
         model = EngRusWord
-        fields = ("eng", "rus")
+        fields = ("eng", "rus", "description")

@@ -24,4 +24,5 @@ jobs:
           key: ${{ secrets.SSHKEY }}
           script: |
             cd ${{ secrets.PATH_TO_SITE }}
+            ./${{ secrets.DEPLOY_FILE }}
             

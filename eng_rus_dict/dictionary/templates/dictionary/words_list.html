@@ -12,10 +12,12 @@
 <table class="words_list" style="border: #515558 solid 2px">
     <th>English word</th>
     <th>Русское слово</th>
+    <th>Описание</th>
     {% for word in words %}
     <tr>
         <td>{{ word.eng }}</td>
         <td>{{ word.rus }}</td>
+        <td>{{ word.description }}</td>
     </tr>
     {% endfor %}
 </table>
